@@ -1,0 +1,23 @@
+# Unexpected Behaviours
+
+1. no default params
+2. char size
+
+```c
+char c = 'A';
+sizeof(c); // 1 : explicitly defined char -> 1 byte
+sizeof('A'); // implecity 'A' is converted to 65 which is int and treated as 4 bytes int
+```
+
+3. string ptr sizeof
+
+```c
+char s[n];
+sizeof(*s) = sizeof(value at s address) = sizeof(char) = 1
+```
+
+4. switch caseonly takes int (char implecitylt int so it too)
+5. globally declared int alto defined to 0
+6. in switch case, the cases must be constant
+
+ 
