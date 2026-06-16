@@ -19,5 +19,7 @@ sizeof(*s) = sizeof(value at s address) = sizeof(char) = 1
 4. switch caseonly takes int (char implecitylt int so it too)
 5. globally declared int alto defined to 0
 6. in switch case, the cases must be constant
+7. struct and union can't have static type variable
+8. typedef variable can't be used inside its defination
 
  
