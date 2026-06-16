@@ -46,23 +46,23 @@ const int* const cpc1 = &b; // ok
 const int* const cpc1 = &x; // ok
 const int* const cpc1 = &y; // ok
 cpc1 = &a; // error : no re-init
-*cpc1 = 10; // no value change
+*cpc1 = 10; // error : no value change
 ```
 
 
-| int a             | Meaning                             |
-| ----------------- | ----------------------------------- |
-| int a             | nothing is constant                 |
-| int const a       | value of "a" is constant            |
-| const int a       | value at "a" is constant            |
-| const int const a | value of "a" and at "a" is constant |
+| int a              | Meaning                             |
+| ------------------ | ----------------------------------- |
+| int a              | nothing is constant                 |
+| int* const a       | value of "a" is constant            |
+| const int* a       | value pointed to by "a" is constant |
+| const int* const a | value of "a" and at "a" is constant |
 
 
 ---
 
 ## Addition and Subtraction from Pointers
 
-1. Addition 
+1. Addition
 
 ```c
 int *p,*q;
@@ -83,7 +83,3 @@ p -= q // ok : if p and q are of same type
 3. Multiplication and Division
 
 `not allowed`
-
- 
-
- 

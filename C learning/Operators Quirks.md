@@ -17,23 +17,24 @@ b = ++a + a++; // compiler dependent
 ```
 
 
-| Precedence | Category       | Operators                                               | Description                                                                                                      | Associativity |
-| ---------- | -------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------- |
-| **1**      | Postfix        | `()` `[]` `.` `->` `++` `--`                            | Function call, array subscript, member access, member access via pointer, postfix increment/decrement            | Left-to-right |
-| **2**      | Unary          | `+` `-` `!` `~` `++` `--` `*` `&` `(type)` `sizeof`     | Unary plus/minus, logical NOT, bitwise NOT, prefix increment/decrement, dereference, address-of, type cast, size | Right-to-left |
-| **3**      | Multiplicative | `*` `/` `%`                                             | Multiplication, division, remainder (modulus)                                                                    | Left-to-right |
-| **4**      | Additive       | `+` `-`                                                 | Addition and subtraction                                                                                         | Left-to-right |
-| **5**      | Bitwise Shift  | `<<` `>>`                                               | Bitwise left shift and right shift                                                                               | Left-to-right |
-| **6**      | Relational     | `<` `<=` `>` `>=`                                       | Less than, less than or equal, greater than, greater than or equal                                               | Left-to-right |
-| **7**      | Equality       | `==` `!=`                                               | Relational equal to and not equal to                                                                             | Left-to-right |
-| **8**      | Bitwise AND    | `&`                                                     | Bitwise AND                                                                                                      | Left-to-right |
-| **9**      | Bitwise XOR    | `^`                                                     | Bitwise exclusive OR                                                                                             | Left-to-right |
-| **10**     | Bitwise OR     | `|`                                                     | Bitwise inclusive OR                                                                                             | Left-to-right |
-| **11**     | Logical AND    | `&&`                                                    | Logical AND (supports short-circuiting)                                                                          | Left-to-right |
-| **12**     | Logical OR     | `||`                                                    | Logical OR (supports short-circuiting)                                                                           | Left-to-right |
-| **13**     | Conditional    | `?:`                                                    | Ternary conditional                                                                                              | Right-to-left |
-| **14**     | Assignment     | `=` `+=` `-=` `*=` `/=` `%=` `<<=` `>>=` `&=` `^=` `|=` | Simple and compound assignments                                                                                  | Right-to-left |
-| **15**     | Comma          | `,`                                                     | Comma separator                                                                                                  | Left-to-right |
+| Precedence | Category       | Operators                                            | Description                                                                                                      | Associativity                   |
+| ---------- | -------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| **1**      | Postfix        | `()` `[]` `.` `->` `++` `--`                         | Function call, array subscript, member access, member access via pointer, postfix increment/decrement            | Left-to-right                   |
+| **2**      | Unary          | `+` `-` `!` `~` `++` `--` `*` `&` `(type)` `sizeof`  | Unary plus/minus, logical NOT, bitwise NOT, prefix increment/decrement, dereference, address-of, type cast, size | Right-to-left                   |
+| **3**      | Multiplicative | `*` `/` `%`                                          | Multiplication, division, remainder (modulus)                                                                    | Left-to-right                   |
+| **4**      | Additive       | `+` `-`                                              | Addition and subtraction                                                                                         | Left-to-right                   |
+| **5**      | Bitwise Shift  | `<<` `>>`                                            | Bitwise left shift and right shift                                                                               | Left-to-right                   |
+| **6**      | Relational     | `<` `<=` `>` `>=`                                    | Less than, less than or equal, greater than, greater than or equal                                               | Left-to-right                   |
+| **7**      | Equality       | `==` `!=`                                            | Relational equal to and not equal to                                                                             | Left-to-right                   |
+| **8**      | Bitwise AND    | `&`                                                  | Bitwise AND                                                                                                      | Left-to-right                   |
+| **9**      | Bitwise XOR    | `^`                                                  | Bitwise exclusive OR                                                                                             | Left-to-right                   |
+| **10**     | Bitwise OR     | |                                                    | |                                                                                                                | Bitwise inclusive OR            |
+| **11**     | Bitwise Not    | `                                                    |                                                                                                             |                            |
+| **12**     | Logical AND    | `&&`                                                 | Logical AND (supports short-circuiting)                                                                          | Left-to-right                   |
+| **13**     | Logical OR     | ||                                                   |                                                                                                             | `                               |
+| **13**     | Conditional    | `?:`                                                 | Ternary conditional                                                                                              | Right-to-left                   |
+| **14**     | Assignment     | `=` `+=` `-=` `*=` `/=` `%=` `<<=` `>>=` `&=` `^=` ` | =`                                                                                                               | Simple and compound assignments |
+| **15**     | Comma          | `,`                                                  | Comma separator                                                                                                  | Left-to-right                   |
 
 
 5. function call compier dependent

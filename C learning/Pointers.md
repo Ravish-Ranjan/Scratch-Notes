@@ -2,7 +2,7 @@
 
 a vairable which stores address of other variable
 
-1. *a: value found at value of a
+1. *a: value found at value (as address) of a
 
 ```c
 a = 10 // &a = 1000
