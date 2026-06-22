@@ -1,5 +1,48 @@
 # Memos Note
 
+ 
+
+# Aroha Company
+
+1. what they so : firmware for soc for routers
+2. What they require :
+
+```
+OA
+Network
+OS
+    bankers algo
+    deadlock avoidence
+    deadlock prevention
+    memory management
+Quant
+linux commands
+proc IOCTL
+build automations
+DSA
+```
+
+3. Interviews
+
+```
+Technical Round 1
+    basic questions (**past interview questions**)
+    most C lang
+```
+
+```
+Technical Round 2
+```
+
+```
+HR Round
+```
+
+[https://www.geeksforgeeks.org/interview-experiences/quiz-corner-gq/](https://www.geeksforgeeks.org/interview-experiences/quiz-corner-gq/)
+#company
+
+---
+
 # Dynamic Prog
 
 ```
