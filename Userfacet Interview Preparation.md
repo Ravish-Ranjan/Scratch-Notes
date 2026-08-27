@@ -1,6 +1,6 @@
-# Userfacet Interview Preparation --- Ravish Ranjan
+# Userfacet Interview Preparation
 
-> **Purpose:** A resume-specific interview question bank with strong,
+> **Purpose:** A resume-specific interview question bank with strong,  
 > truthful answer frameworks for the next Userfacet rounds.
 >
 > **Prepared from:** Ravish Ranjan's submitted resume, the 12 Userfacet
@@ -12,21 +12,21 @@
 > what the resume supports. Do not claim an implementation, metric,
 > technology, or responsibility that you cannot explain in detail.
 
-------------------------------------------------------------------------
+---
 
 # 0. How to Use This Guide
 
 Userfacet interviews in the supplied experiences repeatedly follow this
 pattern:
 
-1.  Introduction
-2.  Resume/project deep dive
-3.  DSA or coding
-4.  Core CS fundamentals
-5.  Role-specific stack
-6.  Scenario/design questions
-7.  CEO/CTO technical + behavioral discussion
-8.  COO/HR behavioral discussion
+1. Introduction
+2. Resume/project deep dive
+3. DSA or coding
+4. Core CS fundamentals
+5. Role-specific stack
+6. Scenario/design questions
+7. CEO/CTO technical + behavioral discussion
+8. COO/HR behavioral discussion
 
 The interviewers frequently reopen projects/code and ask the candidate
 to explain or implement a feature. Therefore, **project depth is as
@@ -47,7 +47,7 @@ For behavioral questions:
 > **Claim → Concrete example → What you learned → How it affects your
 > work now**
 
-------------------------------------------------------------------------
+---
 
 # 1. Your Resume: What the Interviewer Will Notice
 
@@ -55,29 +55,45 @@ Your resume gives the interviewer several obvious paths:
 
 ### Strongest interview hooks
 
--   Full-stack internship
--   Accessibility/Lighthouse 90+
--   Leadership of 7+ events / 10--12 people
--   Next.js
--   Node.js / Express.js
--   Socket.IO
--   MongoDB / PostgreSQL / Prisma / Mongoose / MySQL / Redis
--   Docker / Git / GitHub / Linux
--   OAuth
--   HugnLove Crochet
--   Encode QR API
--   Redis caching and \~70% response-time reduction
--   Streaming QR images directly
--   NPM cart package with zero peer dependencies
--   Dual-storage support
--   Open-source PR
--   Client-facing requirements gathering
--   C/C++/Python/Java
--   OS/DSA/DBMS/OOP coursework
+- Full-stack internship
+- Accessibility/Lighthouse 90+ 
+  - first contentful paint
+  - largest contentful paint
+  - total blocking time
+  - speed index
+  - cumulative layout shift
+  - timt to interactive
+- Leadership of 7+ events / 10--12 people
+- Next.js
+- Nextjs routing
+  - simple
+  - nested
+  - dynamic
+  - catch all
+  - optional catch all
+  - grouped
+  - parallel
+  - api/route
+  - intercepting route
+- Node.js / Express.js
+- Socket.IO
+- MongoDB / PostgreSQL / Prisma / Mongoose / MySQL / Redis
+- Docker / Git / GitHub / Linux
+- OAuth
+- HugnLove Crochet
+- Encode QR API
+- Redis caching and 70% response-time reduction
+- Streaming QR images directly
+- NPM cart package with zero peer dependencies
+- Dual-storage support
+- Open-source PR
+- Client-facing requirements gathering
+- C/C++/Python/Java
+- OS/DSA/DBMS/OOP coursework
 
 **Expect questions to start from the resume and then branch outward.**
 
-------------------------------------------------------------------------
+---
 
 # 2. The 60-Second Introduction
 
@@ -110,15 +126,15 @@ Your resume gives the interviewer several obvious paths:
 
 ### Follow-ups to expect
 
--   Why backend?
--   Why full-stack?
--   Which project are you most proud of?
--   What exactly did you do in your internship?
--   What is your strongest technology?
--   Why Userfacet?
--   Why should we hire you?
+- Why backend?
+- Why full-stack?
+- Which project are you most proud of?
+- What exactly did you do in your internship?
+- What is your strongest technology?
+- Why Userfacet?
+- Why should we hire you?
 
-------------------------------------------------------------------------
+---
 
 # 3. Resume Cross-Examination
 
@@ -148,7 +164,7 @@ Your resume gives the interviewer several obvious paths:
 > Academically, my coursework covers OS, DSA, DBMS and OOP, which gives
 > me the fundamentals behind the technologies I use.
 
-------------------------------------------------------------------------
+---
 
 # 4. Questions About Your Internship
 
@@ -212,7 +228,7 @@ Your resume gives the interviewer several obvious paths:
 > It taught me to evaluate a UI from more than one perspective: visual
 > appearance, responsiveness, accessibility and maintainability.
 
-------------------------------------------------------------------------
+---
 
 # 5. Leadership / Secretary Experience
 
@@ -263,7 +279,7 @@ Your resume gives the interviewer several obvious paths:
 > My goal would be to solve the project problem rather than win an
 > argument.
 
-------------------------------------------------------------------------
+---
 
 # 6. HugnLove Crochet --- Highest Priority Project
 
@@ -389,7 +405,7 @@ Your resume gives the interviewer several obvious paths:
 > I would also make sure authentication errors don't reveal unnecessary
 > information.
 
-------------------------------------------------------------------------
+---
 
 # 7. HugnLove CRUD APIs
 
@@ -438,7 +454,7 @@ Your resume gives the interviewer several obvious paths:
 > Validation should not replace database constraints; both
 > application-level and database-level protection are useful.
 
-------------------------------------------------------------------------
+---
 
 # 8. Image Upload / Thumbnail Pipeline
 
@@ -469,7 +485,7 @@ Your resume gives the interviewer several obvious paths:
 > I would also prevent arbitrary file uploads from becoming a security
 > issue.
 
-------------------------------------------------------------------------
+---
 
 # 9. Encode --- Very High Priority
 
@@ -558,7 +574,7 @@ Your resume gives the interviewer several obvious paths:
 >
 > `qr:v2:<hash>`
 
-------------------------------------------------------------------------
+---
 
 # 10. Streaming QR Images
 
@@ -582,7 +598,7 @@ Your resume gives the interviewer several obvious paths:
 > The `Content-Type` header. For example, if the response is a PNG
 > image, it should indicate `image/png`.
 
-------------------------------------------------------------------------
+---
 
 # 11. GET vs POST in Encode
 
@@ -604,7 +620,7 @@ Your resume gives the interviewer several obvious paths:
 > implementation detail is different from creating or modifying a
 > business resource.
 
-------------------------------------------------------------------------
+---
 
 # 12. Cart NPM Package
 
@@ -669,7 +685,7 @@ Your resume gives the interviewer several obvious paths:
 > Neither should be treated as a secure storage mechanism for sensitive
 > authentication tokens because JavaScript can access the stored values.
 
-------------------------------------------------------------------------
+---
 
 # 13. Open Source Contribution
 
@@ -700,7 +716,7 @@ Your resume gives the interviewer several obvious paths:
 > If I disagree, I would explain the trade-off with evidence and discuss
 > it rather than treating the review as personal criticism.
 
-------------------------------------------------------------------------
+---
 
 # 14. Node.js Questions
 
@@ -768,7 +784,7 @@ Your resume gives the interviewer several obvious paths:
 > asynchronous operations complete, their callbacks or continuations
 > become eligible to run according to the event loop's scheduling rules.
 
-------------------------------------------------------------------------
+---
 
 # 15. Express Questions
 
@@ -800,7 +816,7 @@ Your resume gives the interviewer several obvious paths:
 > secure cookies where applicable, and protection against injection or
 > unsafe file uploads.
 
-------------------------------------------------------------------------
+---
 
 # 16. MongoDB
 
@@ -859,7 +875,7 @@ Your resume gives the interviewer several obvious paths:
 > for tasks such as validation, transformations, logging or related
 > business behavior.
 
-------------------------------------------------------------------------
+---
 
 # 17. PostgreSQL / SQL
 
@@ -922,7 +938,7 @@ Your resume gives the interviewer several obvious paths:
 > should not leave one account debited if the corresponding credit
 > fails.
 
-------------------------------------------------------------------------
+---
 
 # 18. Redis
 
@@ -948,7 +964,7 @@ Your resume gives the interviewer several obvious paths:
 > The database remains the source of truth unless the architecture
 > deliberately uses Redis as a primary store.
 
-------------------------------------------------------------------------
+---
 
 # 19. Socket.IO
 
@@ -973,7 +989,7 @@ Your resume gives the interviewer several obvious paths:
 > events to a specific group rather than broadcasting to every connected
 > client.
 
-------------------------------------------------------------------------
+---
 
 # 20. REST API
 
@@ -992,7 +1008,7 @@ Your resume gives the interviewer several obvious paths:
 > the server between requests, although external systems such as
 > databases or caches can of course store data.
 
-------------------------------------------------------------------------
+---
 
 # 21. OAuth
 
@@ -1011,7 +1027,7 @@ Your resume gives the interviewer several obvious paths:
 >
 > Authorization asks **what are you allowed to do?**
 
-------------------------------------------------------------------------
+---
 
 # 22. Docker / DevOps
 
@@ -1040,7 +1056,7 @@ Your resume gives the interviewer several obvious paths:
 > and system-level requirements. It also makes deployment and local
 > environment consistency easier.
 
-------------------------------------------------------------------------
+---
 
 # 23. Git / GitHub
 
@@ -1065,7 +1081,7 @@ Your resume gives the interviewer several obvious paths:
 > another. It provides a place for review, discussion, automated checks
 > and eventually merging.
 
-------------------------------------------------------------------------
+---
 
 # 24. Linux / Bash
 
@@ -1079,7 +1095,7 @@ Your resume gives the interviewer several obvious paths:
 
 Be ready to explain:
 
-``` text
+```text
 ls
 cd
 pwd
@@ -1107,7 +1123,7 @@ awk
 sed
 ```
 
-------------------------------------------------------------------------
+---
 
 # 25. TypeScript
 
@@ -1129,7 +1145,7 @@ sed
 > I choose based on the type I'm modeling rather than treating one as
 > universally better.
 
-------------------------------------------------------------------------
+---
 
 # 26. React
 
@@ -1186,7 +1202,7 @@ sed
 > reducing unnecessary state updates, and avoiding unnecessary
 > context-wide re-renders.
 
-------------------------------------------------------------------------
+---
 
 # 27. Next.js
 
@@ -1213,7 +1229,7 @@ sed
 > behavior and event handlers to server-rendered HTML so the page
 > becomes interactive.
 
-------------------------------------------------------------------------
+---
 
 # 28. DSA --- Must Practice
 
@@ -1244,7 +1260,7 @@ Be ready to implement it.
 >
 > Time is O(n), with O(h) recursion stack excluding the output.
 
-------------------------------------------------------------------------
+---
 
 # 29. Merge Two Sorted Linked Lists
 
@@ -1259,13 +1275,13 @@ Be ready to implement it.
 
 Then be ready for:
 
--   Recursive solution
--   Empty lists
--   One-node lists
--   Equal values
--   Complexity
+- Recursive solution
+- Empty lists
+- One-node lists
+- Equal values
+- Complexity
 
-------------------------------------------------------------------------
+---
 
 # 30. Longest Consecutive Sequence
 
@@ -1278,7 +1294,7 @@ Then be ready for:
 > This avoids repeatedly starting the same sequence and gives expected
 > O(n) time with O(n) space.
 
-------------------------------------------------------------------------
+---
 
 # 31. Remove Duplicates While Preserving Order
 
@@ -1294,7 +1310,7 @@ Then be ready for:
 > also explain the `filter` + `indexOf` approach, but I would point out
 > that it can become O(n²).
 
-------------------------------------------------------------------------
+---
 
 # 32. Clock Angle
 
@@ -1310,7 +1326,7 @@ Then be ready for:
 >
 > Final answer is `min(diff, 360 - diff)`.
 
-------------------------------------------------------------------------
+---
 
 # 33. OS Questions
 
@@ -1327,7 +1343,7 @@ Then be ready for:
 > A race condition occurs when the result depends on the timing/order of
 > concurrent operations accessing shared state.
 >
-> For example, two requests reading the same balance and both writing an
+> For example, two requests reading the same balance and both writing an  
 > updated balance can overwrite each other's changes.
 
 ## Q116. What is deadlock?
@@ -1337,10 +1353,10 @@ Then be ready for:
 
 ### Four necessary conditions
 
-1.  Mutual exclusion
-2.  Hold and wait
-3.  No preemption
-4.  Circular wait
+1. Mutual exclusion
+2. Hold and wait
+3. No preemption
+4. Circular wait
 
 ## Q117. What is starvation?
 
@@ -1349,7 +1365,7 @@ Then be ready for:
 >
 > Scheduling strategies such as aging can help reduce starvation.
 
-------------------------------------------------------------------------
+---
 
 # 34. DBMS Questions
 
@@ -1367,12 +1383,12 @@ Then be ready for:
 
 Know:
 
--   INNER JOIN
--   LEFT JOIN
--   RIGHT JOIN
--   FULL OUTER JOIN
--   CROSS JOIN
--   SELF JOIN
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL OUTER JOIN
+- CROSS JOIN
+- SELF JOIN
 
 ## Q121. JOIN vs subquery?
 
@@ -1390,7 +1406,7 @@ Know:
 > Triggers can enforce or automate certain behavior, but excessive use
 > can make application behavior harder to understand and test.
 
-------------------------------------------------------------------------
+---
 
 # 35. OOP
 
@@ -1415,7 +1431,7 @@ Know:
 > I generally prefer composition when it reduces coupling and makes
 > behavior easier to change.
 
-------------------------------------------------------------------------
+---
 
 # 36. Scenario Questions
 
@@ -1434,7 +1450,7 @@ Know:
 > For concurrent updates, I would define whether last-write-wins is
 > acceptable or whether optimistic locking/version checks are needed.
 
-------------------------------------------------------------------------
+---
 
 ## Q126. Payment gateway gets stuck. What do you do?
 
@@ -1450,7 +1466,7 @@ Know:
 > The client can safely show a pending state while the server reconciles
 > the transaction.
 
-------------------------------------------------------------------------
+---
 
 ## Q127. Design a Google Docs-like application.
 
@@ -1473,7 +1489,7 @@ Know:
 > entire document on every keystroke because that would become
 > inefficient as the document and number of collaborators grow.
 
-------------------------------------------------------------------------
+---
 
 # 37. Behavioral Questions
 
@@ -1493,7 +1509,7 @@ Know:
 > Userfacet's current focus on designing and shipping AI experiences
 > also interests me because I want to understand how AI features are
 > integrated into real products rather than treating AI as an isolated
-> model or API. \[Verify current company details before the interview.\]
+> model or API. Verify current company details before the interview.
 >
 > I think that combination of product thinking, UX and engineering is a
 > good fit for how I want to grow.
@@ -1527,7 +1543,7 @@ Know:
 > So my interest isn't limited to making something work once; I like
 > thinking about how other developers and users will interact with it.
 
-------------------------------------------------------------------------
+---
 
 # 38. Strengths
 
@@ -1537,22 +1553,22 @@ Know:
 
 > I would say:
 >
-> 1.  **Ownership** --- I like taking a feature from requirements to a
->     working deployment.
-> 2.  **Learning by building** --- I usually understand technologies
->     fastest when I apply them to a real problem.
-> 3.  **Problem solving** --- I enjoy breaking ambiguous problems into
->     smaller technical decisions.
-> 4.  **Adaptability** --- I have worked across frontend, backend,
->     databases, deployment and tooling.
-> 5.  **Team coordination** --- my society experience taught me to
->     communicate and delegate while working with a team.
+> 1. **Ownership** --- I like taking a feature from requirements to a
+>   working deployment.
+> 2. **Learning by building** --- I usually understand technologies
+>   fastest when I apply them to a real problem.
+> 3. **Problem solving** --- I enjoy breaking ambiguous problems into
+>   smaller technical decisions.
+> 4. **Adaptability** --- I have worked across frontend, backend,
+>   databases, deployment and tooling.
+> 5. **Team coordination** --- my society experience taught me to
+>   communicate and delegate while working with a team.
 
 ### If asked for examples
 
 Have one concrete example ready for each.
 
-------------------------------------------------------------------------
+---
 
 # 39. Weaknesses
 
@@ -1582,7 +1598,7 @@ Do not say five fake strengths.
 > focusing on deeper expertise in backend/product engineering instead of
 > trying to become equally advanced in everything.
 
-------------------------------------------------------------------------
+---
 
 # 40. Where do you see yourself in 5 years?
 
@@ -1601,7 +1617,7 @@ Do not say five fake strengths.
 > point where I can be trusted with technically and product-wise
 > important problems.
 
-------------------------------------------------------------------------
+---
 
 # 41. Would you leave Userfacet for a higher offer?
 
@@ -1619,7 +1635,7 @@ Do not say five fake strengths.
 > be to build a strong long-term relationship where both sides continue
 > to find value in working together.
 
-------------------------------------------------------------------------
+---
 
 # 42. What if Google/Microsoft/a bigger company offers you more?
 
@@ -1634,7 +1650,7 @@ Do not say five fake strengths.
 > A bigger brand is attractive, but it isn't automatically the better
 > engineering opportunity for me at every point in my career.
 
-------------------------------------------------------------------------
+---
 
 # 43. What annoys you?
 
@@ -1647,7 +1663,7 @@ Do not say five fake strengths.
 > try to identify whether the issue is unclear requirements, ownership,
 > communication or process and address that specifically.
 
-------------------------------------------------------------------------
+---
 
 # 44. What motivates you?
 
@@ -1660,7 +1676,7 @@ Do not say five fake strengths.
 > That is one reason I enjoy projects where I can see the full path from
 > requirement to deployment.
 
-------------------------------------------------------------------------
+---
 
 # 45. How do you learn a new technology?
 
@@ -1673,7 +1689,7 @@ Do not say five fake strengths.
 > Finally, I try to build something with it rather than stopping at
 > tutorials.
 
-------------------------------------------------------------------------
+---
 
 # 46. What if you don't know the answer?
 
@@ -1690,7 +1706,7 @@ Do not say five fake strengths.
 This is consistent with the supplied Userfacet experiences, which
 explicitly advise candidates not to bluff.
 
-------------------------------------------------------------------------
+---
 
 # 47. Why Backend?
 
@@ -1707,7 +1723,7 @@ explicitly advise candidates not to bluff.
 > frontend or user experience. I prefer being able to understand the
 > complete product.
 
-------------------------------------------------------------------------
+---
 
 # 48. Why Full Stack?
 
@@ -1721,7 +1737,7 @@ explicitly advise candidates not to bluff.
 > My longer-term direction is deeper backend engineering, but I want
 > enough frontend understanding to make good end-to-end decisions.
 
-------------------------------------------------------------------------
+---
 
 # 49. Questions About Your Skill Ratings
 
@@ -1743,7 +1759,7 @@ Do **not** claim 10/10.
 > So I would give myself a realistic rating and be prepared to explain
 > exactly what I can and cannot do at that level.
 
-------------------------------------------------------------------------
+---
 
 # 50. Resume Technology Rapid-Fire
 
@@ -1751,59 +1767,59 @@ You list many technologies. Prepare at least one question for each.
 
 ## Backend
 
--   What is Next.js?
--   What is Node.js?
--   How does Express work?
--   What is Socket.IO?
--   What is Flask?
--   What is a REST API?
+- What is Next.js?
+- What is Node.js?
+- How does Express work?
+- What is Socket.IO?
+- What is Flask?
+- What is a REST API?
 
 ## Frontend
 
--   React vs Next.js?
--   Why Tailwind?
--   Why TypeScript?
--   What is Electron?
--   What is Tauri?
--   Electron vs Tauri?
+- React vs Next.js?
+- Why Tailwind?
+- Why TypeScript?
+- What is Electron?
+- What is Tauri?
+- Electron vs Tauri?
 
 ## Database
 
--   MongoDB vs PostgreSQL?
--   Prisma vs Mongoose?
--   MySQL vs PostgreSQL?
--   SQLite use cases?
--   Supabase?
--   Redis?
+- MongoDB vs PostgreSQL?
+- Prisma vs Mongoose?
+- MySQL vs PostgreSQL?
+- SQLite use cases?
+- Supabase?
+- Redis?
 
 ## DevOps
 
--   Git?
--   Docker?
--   Container?
--   Image?
--   CI/CD?
--   Cloud deployment?
+- Git?
+- Docker?
+- Container?
+- Image?
+- CI/CD?
+- Cloud deployment?
 
 ## Languages
 
--   C vs C++?
--   Python vs JavaScript?
--   Java vs C++?
--   Static vs dynamic typing?
+- C vs C++?
+- Python vs JavaScript?
+- Java vs C++?
+- Static vs dynamic typing?
 
 ## Other
 
--   Zustand?
--   OAuth?
--   Makefile?
--   Linux?
+- Zustand?
+- OAuth?
+- Makefile?
+- Linux?
 
 **Important:** If you cannot answer a technology confidently, be ready
 to explain why it appears on the resume and what you actually used it
 for.
 
-------------------------------------------------------------------------
+---
 
 # 51. Prisma vs Mongoose
 
@@ -1818,7 +1834,7 @@ for.
 > They solve related developer-experience problems but target different
 > database models and workflows.
 
-------------------------------------------------------------------------
+---
 
 # 52. MySQL vs PostgreSQL
 
@@ -1830,7 +1846,7 @@ for.
 > I would choose based on the team's ecosystem, required features,
 > workload and operational requirements.
 
-------------------------------------------------------------------------
+---
 
 # 53. Supabase
 
@@ -1840,7 +1856,7 @@ for.
 > I used it in HugnLove Crochet because it reduced the amount of backend
 > infrastructure I needed to manage for a client project.
 
-------------------------------------------------------------------------
+---
 
 # 54. Zustand
 
@@ -1851,7 +1867,7 @@ for.
 > I would choose it when the state complexity justifies centralized
 > state and keep local UI state local where possible.
 
-------------------------------------------------------------------------
+---
 
 # 55. Electron vs Tauri
 
@@ -1863,7 +1879,7 @@ for.
 > Tauri uses the system webview with a Rust backend, which can produce
 > smaller binaries and a different security/performance model.
 
-------------------------------------------------------------------------
+---
 
 # 56. AI / Current Userfacet Direction
 
@@ -1883,20 +1899,22 @@ product/experience problem rather than only a model problem.
 >
 > My background is primarily web and backend engineering, so I see AI
 > product engineering as an opportunity to combine what I already
-> know---APIs, data, frontend interaction and deployment---with AI
+> know
+> ---APIs, data, frontend interaction and deployment
+> ---with AI
 > capabilities.
 >
 > I would like to learn how AI features are evaluated, guarded,
 > integrated and shipped to real users rather than treating an LLM API
 > call as the entire product.
 
-------------------------------------------------------------------------
+---
 
 # 57. Questions They Can Ask About Your Numbers
 
 Your resume contains quantified claims. Be prepared to defend every one.
 
-## Q135. How did you measure the \~70% Encode improvement?
+## Q135. How did you measure the 70% Encode improvement?
 
 ### Answer framework
 
@@ -1922,21 +1940,21 @@ Your resume contains quantified claims. Be prepared to defend every one.
 > integration target rather than a claim that every developer will
 > always finish in exactly five minutes.
 
-------------------------------------------------------------------------
+---
 
 # 58. Questions Designed to Challenge Your Resume
 
 Be ready for:
 
-1.  Why do you have so many technologies listed?
-2.  Which technology are you strongest in?
-3.  Which one are you weakest in?
-4.  What have you actually used in production?
-5.  Which project demonstrates your backend ability?
-6.  Which project demonstrates your frontend ability?
-7.  Which project demonstrates system design?
-8.  Which project demonstrates teamwork?
-9.  Which project demonstrates performance optimization?
+1. Why do you have so many technologies listed?
+2. Which technology are you strongest in?
+3. Which one are you weakest in?
+4. What have you actually used in production?
+5. Which project demonstrates your backend ability?
+6. Which project demonstrates your frontend ability?
+7. Which project demonstrates system design?
+8. Which project demonstrates teamwork?
+9. Which project demonstrates performance optimization?
 10. Which project demonstrates reusable engineering?
 11. What did you personally write?
 12. What did you copy or adapt?
@@ -1949,7 +1967,7 @@ Be ready for:
 19. What is missing from your resume?
 20. Which skill is only theoretical?
 
-------------------------------------------------------------------------
+---
 
 # 59. High-Probability Coding Problems
 
@@ -1957,68 +1975,68 @@ Practice these before the interview:
 
 ### Arrays
 
--   Two Sum
--   Three Sum
--   Remove duplicates
--   Longest consecutive sequence
--   Maximum subarray
--   Subarray sum
--   Merge intervals
--   Product except self
--   Sliding window
+- Two Sum
+- Three Sum
+- Remove duplicates
+- Longest consecutive sequence
+- Maximum subarray
+- Subarray sum
+- Merge intervals
+- Product except self
+- Sliding window
 
 ### Strings
 
--   Longest palindrome
--   Longest substring without repetition
--   Valid anagram
--   Group anagrams
--   Character frequency
+- Longest palindrome
+- Longest substring without repetition
+- Valid anagram
+- Group anagrams
+- Character frequency
 
 ### Linked Lists
 
--   Reverse linked list
--   Merge two sorted lists
--   Detect cycle
--   Middle node
--   Remove nth node
+- Reverse linked list
+- Merge two sorted lists
+- Detect cycle
+- Middle node
+- Remove nth node
 
 ### Trees
 
--   Level order
--   Right view
--   Left view
--   Height
--   Diameter
--   LCA
--   Balanced tree
--   BST validation
+- Level order
+- Right view
+- Left view
+- Height
+- Diameter
+- LCA
+- Balanced tree
+- BST validation
 
 ### Common interview problems
 
--   Clock angle
--   Producer/consumer reasoning
--   LRU cache
--   Rate limiter
--   Pagination
--   Duplicate detection
--   Top K frequent elements
+- Clock angle
+- Producer/consumer reasoning
+- LRU cache
+- Rate limiter
+- Pagination
+- Duplicate detection
+- Top K frequent elements
 
-------------------------------------------------------------------------
+---
 
 # 60. Final 30 Questions to Practice Out Loud
 
 If you have limited time, practice these first:
 
-1.  Tell me about yourself.
-2.  Explain HugnLove Crochet.
-3.  Explain Encode.
-4.  Why did you use Redis?
-5.  How did Redis give you \~70% improvement?
-6.  Why MongoDB/PostgreSQL?
-7.  Explain JWT authentication.
-8.  How would you implement refresh tokens?
-9.  Explain your CRUD APIs.
+1. Tell me about yourself.
+2. Explain HugnLove Crochet.
+3. Explain Encode.
+4. Why did you use Redis?
+5. How did Redis give you 70% improvement?
+6. Why MongoDB/PostgreSQL?
+7. Explain JWT authentication.
+8. How would you implement refresh tokens?
+9. Explain your CRUD APIs.
 10. Write one of your APIs.
 11. Explain your database schema.
 12. What happens when a request reaches Node/Express?
@@ -2041,7 +2059,7 @@ If you have limited time, practice these first:
 29. Where do you see yourself in five years?
 30. Would you leave for a higher offer?
 
-------------------------------------------------------------------------
+---
 
 # 61. Interviewer's Likely Follow-Up Chain
 
@@ -2054,7 +2072,7 @@ For example:
 
 Be prepared for:
 
-``` text
+```text
 Why Redis?
   ↓
 Why not database?
@@ -2074,7 +2092,7 @@ How would you prevent it?
 
 For MongoDB:
 
-``` text
+```text
 Why MongoDB?
   ↓
 Limitations?
@@ -2094,7 +2112,7 @@ Sharding?
 
 For JWT:
 
-``` text
+```text
 Why JWT?
   ↓
 Where store it?
@@ -2114,7 +2132,7 @@ Token revocation?
 
 For Encode:
 
-``` text
+```text
 Explain Encode
   ↓
 Why Redis?
@@ -2132,7 +2150,7 @@ How did you benchmark 70%?
 How would you scale it?
 ```
 
-------------------------------------------------------------------------
+---
 
 # 62. Your Strongest Narrative
 
@@ -2143,7 +2161,7 @@ Your resume can tell a coherent story if you present it correctly:
 
 The evidence:
 
-``` text
+```text
 Internship
    ↓
 Real users + accessibility
@@ -2172,30 +2190,30 @@ That is much stronger than saying:
 The second statement sounds like a list. The first demonstrates
 progression.
 
-------------------------------------------------------------------------
+---
 
 # 63. Things NOT to Say
 
 Avoid:
 
--   "MongoDB is better than SQL."
--   "JWT is more secure than sessions."
--   "Node.js is single-threaded, so it can't do multiple things."
--   "Virtual DOM makes React faster."
--   "Redis is a database replacement."
--   "NoSQL doesn't have schemas."
--   "MongoDB doesn't support transactions."
--   "PUT and PATCH are exactly the same."
--   "GET is always faster than POST."
--   "I know everything in my tech stack."
--   "I can learn anything instantly."
--   "My weakness is perfectionism."
--   "I will definitely stay for exactly X years."
--   "I want Userfacet because it is a good company."
+- "MongoDB is better than SQL."
+- "JWT is more secure than sessions."
+- "Node.js is single-threaded, so it can't do multiple things."
+- "Virtual DOM makes React faster."
+- "Redis is a database replacement."
+- "NoSQL doesn't have schemas."
+- "MongoDB doesn't support transactions."
+- "PUT and PATCH are exactly the same."
+- "GET is always faster than POST."
+- "I know everything in my tech stack."
+- "I can learn anything instantly."
+- "My weakness is perfectionism."
+- "I will definitely stay for exactly X years."
+- "I want Userfacet because it is a good company."
 
 Prefer nuanced answers that explain **trade-offs**.
 
-------------------------------------------------------------------------
+---
 
 # 64. Final Preparation Strategy
 
@@ -2203,39 +2221,39 @@ Prefer nuanced answers that explain **trade-offs**.
 
 ### First 3 hours
 
--   HugnLove deep dive
--   Encode deep dive
--   Cart package
--   Internship
+- HugnLove deep dive
+- Encode deep dive
+- Cart package
+- Internship
 
 ### Next 3 hours
 
--   JavaScript
--   Node
--   Express
--   MongoDB/Mongoose
--   Redis
+- JavaScript
+- Node
+- Express
+- MongoDB/Mongoose
+- Redis
 
 ### Next 2 hours
 
--   SQL/DBMS
--   OS
--   DSA
+- SQL/DBMS
+- OS
+- DSA
 
 ### Final 1--2 hours
 
 Speak answers aloud:
 
--   Introduction
--   Why Userfacet
--   Why backend/full-stack
--   Strengths
--   Weaknesses
--   5-year plan
--   Higher offer question
--   Project explanation
+- Introduction
+- Why Userfacet
+- Why backend/full-stack
+- Strengths
+- Weaknesses
+- 5-year plan
+- Higher offer question
+- Project explanation
 
-------------------------------------------------------------------------
+---
 
 # 65. Final Rules
 
@@ -2270,23 +2288,23 @@ say:
 
 Explain:
 
--   assumptions
--   brute force
--   optimized approach
--   complexity
--   edge cases
--   implementation
+- assumptions
+- brute force
+- optimized approach
+- complexity
+- edge cases
+- implementation
 
 ### Rule 5 --- Behavioral answers must be consistent
 
 Your answers about:
 
--   why backend
--   why Userfacet
--   five-year plan
--   strengths
--   weaknesses
--   commitment
+- why backend
+- why Userfacet
+- five-year plan
+- strengths
+- weaknesses
+- commitment
 
 should not contradict each other.
 
@@ -2295,13 +2313,15 @@ should not contradict each other.
 Use the answers as **answer structures**. Your spoken version should
 sound like you.
 
-------------------------------------------------------------------------
+---
 
 # Sources
 
--   Ravish Ranjan submitted resume --- primary source for all
-    resume-specific questions and claims.
--   Userfacet interview experiences supplied in the conversation ---
-    used to identify recurring interview patterns and actual questions.
--   Userfacet official website --- used only to update the "Why
-    Userfacet?" / current company-direction section.
+- Ravish Ranjan submitted resume --- primary source for all
+resume-specific questions and claims.
+- Userfacet interview experiences supplied in the conversation ---
+used to identify recurring interview patterns and actual questions.
+- Userfacet official website --- used only to update the "Why
+Userfacet?" / current company-direction section.
+
+ 
