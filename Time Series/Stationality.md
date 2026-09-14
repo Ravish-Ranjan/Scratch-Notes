@@ -26,13 +26,13 @@ Expected
   1. First-order stationary : identicaly if takesn snapshot of series at any point
   2. E(Xt) = constant
 7. Type of stationary
-  1. strict : Xt is string stationary id prob. dist. function is independent of t only lag k
-  2. weak : constant mean and varience, sov and corr being function of time-diff only
+  1. weak : constant mean and varience, sov and corr being function of time-diff only
     1.  
       $$
       \gamma_k = Y_{t,t+k}
       $$
-     
+  2. strict/strong : prob dist doesnt change over t, it has same joint dist. prob. rg. : iid white noise
+  3. if Xr is gaussian TS
 8. mean,variance is constant and cov,corr independent of t for any lag k
 9. Zero-mean models
   1. IID noise
