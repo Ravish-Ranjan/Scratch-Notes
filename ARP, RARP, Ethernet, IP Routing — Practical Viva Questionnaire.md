@@ -20,7 +20,7 @@ This questionnaire is based on the uploaded practical program `a3.py`, which sim
 
 ### Q4. What is a broadcast domain?
 
-**Answer:** A broadcast domain is a network area in which a broadcast frame can reach all attached devices. The practical models each `Network` object as one Ethernet LAN/broadcast domain. fileciteturn0file0L86-L102
+**Answer:** A broadcast domain is a network area in which a broadcast frame can reach all attached devices. The practical models each `Network` object as one Ethernet LAN/broadcast domain.
 
 ### Q5. What is an IP address?
 
@@ -71,19 +71,19 @@ This questionnaire is based on the uploaded practical program `a3.py`, which sim
 4. The sender stores the IP-to-MAC mapping in its ARP cache.
 5. The sender can then construct the Ethernet frame.
 
-The practical implements this flow in `resolve_arp()`. fileciteturn0file0L225-L264
+The practical implements this flow in `resolve_arp()`.
 
 ### Q14. What does an ARP Request ask?
 
 **Answer:** It effectively asks: **"Who has this IP address?"**
 
-The program stores the requested address in `target_ip`. fileciteturn0file0L241-L253
+The program stores the requested address in `target_ip`.
 
 ### Q15. Is an ARP Request broadcast or unicast?
 
 **Answer:** An ARP Request is normally **broadcast** on the local Ethernet network.
 
-The practical uses `FF:FF:FF:FF:FF:FF` as the destination MAC. fileciteturn0file0L247-L253
+The practical uses `FF:FF:FF:FF:FF:FF` as the destination MAC.
 
 ### Q16. What is the Ethernet broadcast MAC address?
 
@@ -93,15 +93,15 @@ The practical uses `FF:FF:FF:FF:FF:FF` as the destination MAC. filecitetur
 
 **Answer:** Normally, the ARP Reply is **unicast** to the requester.
 
-The practical explicitly creates a reply frame whose destination MAC is the original requester's MAC. fileciteturn0file0L280-L296
+The practical explicitly creates a reply frame whose destination MAC is the original requester's MAC.
 
 ### Q18. What happens when a host receives an ARP Request?
 
-**Answer:** It checks whether the requested IP matches its own IP. If it does not, it ignores the request. If it does, it sends an ARP Reply containing its IP-to-MAC mapping. fileciteturn0file0L266-L296
+**Answer:** It checks whether the requested IP matches its own IP. If it does not, it ignores the request. If it does, it sends an ARP Reply containing its IP-to-MAC mapping.
 
 ### Q19. What happens if no device owns the requested IP?
 
-**Answer:** No ARP Reply is generated, so the sender cannot resolve the destination MAC. The practical reports ARP failure and does not send the IP packet. fileciteturn0file0L255-L264
+**Answer:** No ARP Reply is generated, so the sender cannot resolve the destination MAC. The practical reports ARP failure and does not send the IP packet.
 
 ### Q20. What is an ARP cache?
 
@@ -121,15 +121,15 @@ The practical explicitly creates a reply frame whose destination MAC is the orig
 
 ### Q24. What happens when an ARP cache entry expires?
 
-**Answer:** The entry is deleted and a subsequent lookup becomes a cache MISS. The practical uses `time.monotonic()` to determine expiry. fileciteturn0file0L22-L43
+**Answer:** The entry is deleted and a subsequent lookup becomes a cache MISS. The practical uses `time.monotonic()` to determine expiry.
 
 ### Q25. What is TTL in the ARP cache in this practical?
 
-**Answer:** It is the amount of time for which a cached IP-to-MAC mapping remains valid. Host-A and the other hosts are configured with an ARP TTL of **5 seconds**. fileciteturn0file0L599-L624
+**Answer:** It is the amount of time for which a cached IP-to-MAC mapping remains valid. Host-A and the other hosts are configured with an ARP TTL of **5 seconds**.
 
 ### Q26. Why does the practical wait for 6 seconds?
 
-**Answer:** The cache TTL is 5 seconds, so waiting 6 seconds demonstrates that the cached mapping has expired and must be resolved again. fileciteturn0file0L691-L699
+**Answer:** The cache TTL is 5 seconds, so waiting 6 seconds demonstrates that the cached mapping has expired and must be resolved again.
 
 ---
 
@@ -153,23 +153,23 @@ The practical explicitly creates a reply frame whose destination MAC is the orig
 
 ### Q29. What information does the host know before RARP in this practical?
 
-**Answer:** The host knows only its MAC address. The program explicitly demonstrates this situation before sending the RARP Request. fileciteturn0file0L196-L213
+**Answer:** The host knows only its MAC address. The program explicitly demonstrates this situation before sending the RARP Request.
 
 ### Q30. Is the RARP Request broadcast in this simulation?
 
-**Answer:** Yes. The RARP Request is placed inside an Ethernet broadcast frame. fileciteturn0file0L202-L213
+**Answer:** Yes. The RARP Request is placed inside an Ethernet broadcast frame.
 
 ### Q31. What does the RARP server maintain?
 
-**Answer:** It maintains a static **MAC-to-IP mapping**. fileciteturn0file0L130-L140
+**Answer:** It maintains a static **MAC-to-IP mapping**.
 
 ### Q32. What happens when the RARP server finds a mapping?
 
-**Answer:** It creates an RARP Reply containing the assigned IP address and sends it as a unicast Ethernet frame to the requesting MAC address. fileciteturn0file0L148-L174
+**Answer:** It creates an RARP Reply containing the assigned IP address and sends it as a unicast Ethernet frame to the requesting MAC address.
 
 ### Q33. What happens if the RARP server does not know the MAC address?
 
-**Answer:** No RARP Reply is sent. The practical demonstrates this with `Unknown-Host`. fileciteturn0file0L664-L673
+**Answer:** No RARP Reply is sent. The practical demonstrates this with `Unknown-Host`.
 
 ### Q34. Why is RARP largely obsolete?
 
@@ -195,7 +195,7 @@ The practical explicitly creates a reply frame whose destination MAC is the orig
 - Destination MAC
 - Payload
 
-This is represented by the `EthernetFrame` dataclass. fileciteturn0file0L50-L54
+This is represented by the `EthernetFrame` dataclass.
 
 ### Q38. What is the payload of an Ethernet frame?
 
@@ -203,15 +203,15 @@ This is represented by the `EthernetFrame` dataclass. fileciteturn0file0�
 
 ### Q39. What happens to a broadcast frame in the simulated network?
 
-**Answer:** It is delivered to every device attached to that network. fileciteturn0file0L109-L118
+**Answer:** It is delivered to every device attached to that network.
 
 ### Q40. What happens to a unicast frame?
 
-**Answer:** The simulation searches for the device whose MAC address matches the destination MAC and delivers the frame only to that device. fileciteturn0file0L121-L128
+**Answer:** The simulation searches for the device whose MAC address matches the destination MAC and delivers the frame only to that device.
 
 ### Q41. What happens if no device owns the destination MAC?
 
-**Answer:** The Ethernet frame is dropped. fileciteturn0file0L121-L128
+**Answer:** The Ethernet frame is dropped.
 
 ---
 
@@ -230,7 +230,7 @@ This is represented by the `EthernetFrame` dataclass. fileciteturn0file0�
 - TTL
 - Data
 
-The corresponding dataclass is defined in the practical. fileciteturn0file0L56-L61
+The corresponding dataclass is defined in the practical.
 
 ### Q44. What is the difference between an IP packet and an Ethernet frame?
 
@@ -238,11 +238,11 @@ The corresponding dataclass is defined in the practical. fileciteturn0file
 
 ### Q45. Does the IP source/destination change when a router forwards the packet in this simulation?
 
-**Answer:** No. The practical explicitly keeps the IP source and destination unchanged while creating a new Ethernet frame for the outbound LAN. fileciteturn0file0L504-L518
+**Answer:** No. The practical explicitly keeps the IP source and destination unchanged while creating a new Ethernet frame for the outbound LAN.
 
 ### Q46. Do the Ethernet MAC addresses change when a router forwards a packet?
 
-**Answer:** Yes. The router creates a new Ethernet frame using the outbound interface's MAC address as the source and the next destination's MAC address as the destination. fileciteturn0file0L504-L518
+**Answer:** Yes. The router creates a new Ethernet frame using the outbound interface's MAC address as the source and the next destination's MAC address as the destination.
 
 ---
 
@@ -252,13 +252,13 @@ The corresponding dataclass is defined in the practical. fileciteturn0file
 
 **Answer:** It checks whether the destination IP belongs to its configured subnet.
 
-The practical performs this test using the Python `ipaddress` module. fileciteturn0file0L322-L333
+The practical performs this test using the Python `ipaddress` module.
 
 ### Q48. Does a router need to be used for communication between two hosts on the same subnet?
 
 **Answer:** Normally, no. The sender resolves the destination host's MAC address using ARP and sends the Ethernet frame directly to that MAC.
 
-The practical explicitly prints that a router is not required for local-subnet communication. fileciteturn0file0L324-L328
+The practical explicitly prints that a router is not required for local-subnet communication.
 
 ### Q49. What happens in Host-A → Host-B communication?
 
@@ -287,7 +287,7 @@ The practical explicitly prints that a router is not required for local-subnet c
 
 ### Q52. When does the host use its gateway in this practical?
 
-**Answer:** When the destination IP is not inside the host's local subnet. The next-hop IP is then set to the configured gateway IP. fileciteturn0file0L324-L336
+**Answer:** When the destination IP is not inside the host's local subnet. The next-hop IP is then set to the configured gateway IP.
 
 ### Q53. Why does the sender ARP for the gateway rather than the remote host?
 
@@ -312,7 +312,7 @@ The practical explicitly prints that a router is not required for local-subnet c
 - `R1-LAN1`
 - `R1-LAN2`
 
-They connect LAN-1 and LAN-2 respectively. fileciteturn0file0L636-L650
+They connect LAN-1 and LAN-2 respectively.
 
 ### Q57. What are the router's IP addresses?
 
@@ -321,7 +321,7 @@ They connect LAN-1 and LAN-2 respectively. fileciteturn0file0L636-L650�
 - LAN-1 interface: `192.168.1.1`
 - LAN-2 interface: `192.168.2.1`
 
-These are configured in the practical. fileciteturn0file0L638-L650
+These are configured in the practical.
 
 ### Q58. What are the two simulated networks?
 
@@ -330,7 +330,6 @@ These are configured in the practical. fileciteturn0file0L638-L650
 - LAN-1: `192.168.1.0/24`
 - LAN-2: `192.168.2.0/24`
 
-fileciteturn0file0L579-L590
 
 ### Q59. What IP addresses do Host-A, Host-B and Host-C have?
 
@@ -340,7 +339,6 @@ These are configured in the practical. fileciteturn0file0L638-L650
 - Host-B: `192.168.1.20`
 - Host-C: `192.168.2.10`
 
-fileciteturn0file0L599-L624
 
 ### Q60. Which hosts are on the same subnet?
 
@@ -348,15 +346,15 @@ These are configured in the practical. fileciteturn0file0L638-L650
 
 ### Q61. What is the router's job in Host-A → Host-C communication?
 
-**Answer:** The router receives the IP packet from LAN-1, determines that Host-C belongs to LAN-2, decrements TTL, resolves Host-C's MAC on LAN-2, creates a new Ethernet frame, and transmits it onto LAN-2. fileciteturn0file0L463-L519
+**Answer:** The router receives the IP packet from LAN-1, determines that Host-C belongs to LAN-2, decrements TTL, resolves Host-C's MAC on LAN-2, creates a new Ethernet frame, and transmits it onto LAN-2.
 
 ### Q62. How does the router determine its outbound interface?
 
-**Answer:** It checks its interfaces and selects the interface whose subnet contains the destination IP. fileciteturn0file0L456-L460
+**Answer:** It checks its interfaces and selects the interface whose subnet contains the destination IP.
 
 ### Q63. What happens if the router cannot find a route to the destination?
 
-**Answer:** The simulation drops the packet and reports that there is no route for the destination IP. fileciteturn0file0L482-L486
+**Answer:** The simulation drops the packet and reports that there is no route for the destination IP.
 
 ---
 
@@ -383,7 +381,7 @@ R1-LAN2
 Host-C
 ```
 
-The practical models this as a packet from `192.168.1.10` to `192.168.2.10`. fileciteturn0file0L711-L715
+The practical models this as a packet from `192.168.1.10` to `192.168.2.10`.
 
 ### Q65. What happens to the destination IP while crossing the router?
 
@@ -415,15 +413,15 @@ The practical models this as a packet from `192.168.1.10` to `192.168.2.10`. 
 
 ### Q71. What does the router do to TTL?
 
-**Answer:** It decrements TTL by 1 when forwarding the packet. The practical performs `packet.ttl -= 1`. fileciteturn0file0L463-L480
+**Answer:** It decrements TTL by 1 when forwarding the packet. The practical performs `packet.ttl -= 1`.
 
 ### Q72. What happens if TTL becomes zero?
 
-**Answer:** The packet is dropped because its TTL has expired. fileciteturn0file0L474-L480
+**Answer:** The packet is dropped because its TTL has expired.
 
 ### Q73. What happens in the TTL demonstration with `TTL=1`?
 
-**Answer:** Host-A sends a packet with TTL 1 to Host-C. The router decrements it to 0 and drops the packet. fileciteturn0file0L727-L733
+**Answer:** Host-A sends a packet with TTL 1 to Host-C. The router decrements it to 0 and drops the packet.
 
 ### Q74. Does a normal Layer-2 switch decrement IP TTL?
 
@@ -485,7 +483,7 @@ Application data
 
 ### Q84. Why is `@dataclass` used?
 
-**Answer:** It provides a convenient way to define classes primarily used to store structured data, such as `IPPacket`, `EthernetFrame`, `ARPRequest`, and `ARPReply`. fileciteturn0file0L10-L84
+**Answer:** It provides a convenient way to define classes primarily used to store structured data, such as `IPPacket`, `EthernetFrame`, `ARPRequest`, and `ARPReply`.
 
 ### Q85. Why is the `ipaddress` module used?
 
@@ -493,7 +491,7 @@ Application data
 
 ### Q86. Why is `time.monotonic()` used for ARP expiry?
 
-**Answer:** It provides a steadily increasing clock suitable for measuring elapsed time, avoiding problems caused by changes to the system wall clock. The cache stores `expires_at` using this clock. fileciteturn0file0L22-L43
+**Answer:** It provides a steadily increasing clock suitable for measuring elapsed time, avoiding problems caused by changes to the system wall clock. The cache stores `expires_at` using this clock.
 
 ### Q87. What is a dictionary used for in `ARPCache`?
 
@@ -507,19 +505,18 @@ Application data
 - MAC address
 - Expiration time
 
-fileciteturn0file0L10-L15
 
 ### Q89. What does `Network.connect()` do?
 
-**Answer:** It attaches a device to the network and assigns that network object to the device's `network` attribute. fileciteturn0file0L100-L104
+**Answer:** It attaches a device to the network and assigns that network object to the device's `network` attribute.
 
 ### Q90. What does `Network.is_local()` do?
 
-**Answer:** It checks whether a supplied IP address belongs to the network represented by that `Network` object. fileciteturn0file0L106-L107
+**Answer:** It checks whether a supplied IP address belongs to the network represented by that `Network` object.
 
 ### Q91. What is polymorphism used for in `receive_frame()`?
 
-**Answer:** The same receiving mechanism handles different payload types and uses `isinstance()` to determine whether the payload is an ARP Request, ARP Reply, RARP Reply, or IP packet. fileciteturn0file0L266-L312
+**Answer:** The same receiving mechanism handles different payload types and uses `isinstance()` to determine whether the payload is an ARP Request, ARP Reply, RARP Reply, or IP packet.
 
 ### Q92. Why is `payload` typed as `object`?
 
@@ -527,7 +524,7 @@ Application data
 
 ### Q93. Why is `None` used for Host-A's IP during the RARP demonstration?
 
-**Answer:** It simulates a device that currently has no assigned IP address. fileciteturn0file0L654-L658
+**Answer:** It simulates a device that currently has no assigned IP address.
 
 ---
 
@@ -547,11 +544,11 @@ Application data
 8. Second cross-subnet packet
 9. TTL demonstration
 
-These are the nine numbered demonstrations in `main()`. fileciteturn0file0L654-L735
+These are the nine numbered demonstrations in `main()`.
 
 ### Q95. What happens in the successful RARP demonstration?
 
-**Answer:** Host-A's IP is temporarily set to `None`. It broadcasts a RARP Request using its MAC. The RARP server has a mapping for Host-A's MAC and returns `192.168.1.10`. fileciteturn0file0L654-L662
+**Answer:** Host-A's IP is temporarily set to `None`. It broadcasts a RARP Request using its MAC. The RARP server has a mapping for Host-A's MAC and returns `192.168.1.10`.
 
 ### Q96. What is the RARP mapping for Host-A?
 
@@ -561,23 +558,23 @@ These are the nine numbered demonstrations in `main()`. fileciteturn0file0
 00:00:00:00:00:01 → 192.168.1.10
 ```
 
-The mapping is explicitly configured in the RARP server. fileciteturn0file0L631-L633
+The mapping is explicitly configured in the RARP server.
 
 ### Q97. What happens in the failed RARP demonstration?
 
-**Answer:** `Unknown-Host` sends a RARP Request using MAC `00:00:00:00:99:99`. The RARP server has no mapping, so it sends no reply. fileciteturn0file0L664-L673
+**Answer:** `Unknown-Host` sends a RARP Request using MAC `00:00:00:00:99:99`. The RARP server has no mapping, so it sends no reply.
 
 ### Q98. What is the ARP failure test?
 
-**Answer:** Host-A tries to send data to `192.168.1.99`. No simulated host owns that IP, so ARP cannot obtain a MAC address and the packet is not sent. fileciteturn0file0L703-L709
+**Answer:** Host-A tries to send data to `192.168.1.99`. No simulated host owns that IP, so ARP cannot obtain a MAC address and the packet is not sent.
 
 ### Q99. Why does the second Host-A → Host-B packet not need another ARP Request?
 
-**Answer:** The first communication stores Host-B's MAC in Host-A's ARP cache. The second packet can therefore use the cached mapping. fileciteturn0file0L683-L689
+**Answer:** The first communication stores Host-B's MAC in Host-A's ARP cache. The second packet can therefore use the cached mapping.
 
 ### Q100. Why does ARP happen again after cache expiry?
 
-**Answer:** The cached mapping is no longer valid after its TTL expires, so Host-A must perform ARP resolution again. fileciteturn0file0L691-L699
+**Answer:** The cached mapping is no longer valid after its TTL expires, so Host-A must perform ARP resolution again.
 
 ---
 
@@ -613,15 +610,15 @@ The mapping is explicitly configured in the RARP server. fileciteturn0file
 
 ### Q108. What if the router has no interface whose subnet contains the destination?
 
-**Answer:** The practical reports that there is no route and drops the packet. fileciteturn0file0L482-L486
+**Answer:** The practical reports that there is no route and drops the packet.
 
 ### Q109. What if the Ethernet destination MAC does not belong to any connected device?
 
-**Answer:** The simulated network drops the frame. fileciteturn0file0L121-L128
+**Answer:** The simulated network drops the frame.
 
 ### Q110. What if Host-A has no IP address and tries to send an IP packet?
 
-**Answer:** The practical checks for `self.ip is None` and refuses to send the packet. fileciteturn0file0L314-L320
+**Answer:** The practical checks for `self.ip is None` and refuses to send the packet.
 
 ---
 
@@ -645,7 +642,7 @@ The mapping is explicitly configured in the RARP server. fileciteturn0file
 
 ### Q115. Does the router change the destination IP when forwarding?
 
-**Answer:** No, not in ordinary routing. The destination IP remains the final destination. In this simulation, it explicitly remains unchanged. fileciteturn0file0L504-L510
+**Answer:** No, not in ordinary routing. The destination IP remains the final destination. In this simulation, it explicitly remains unchanged.
 
 ### Q116. What changes at every router hop?
 
@@ -770,7 +767,7 @@ Host-A
 Host-B
 ```
 
-The practical then repeats the communication to demonstrate an ARP cache HIT. fileciteturn0file0L675-L689
+The practical then repeats the communication to demonstrate an ARP cache HIT.
 
 ---
 
@@ -799,7 +796,7 @@ R1-LAN2
 Host-C
 ```
 
-The router then sends a newly framed Ethernet packet on LAN-2 while keeping the IP source/destination unchanged. fileciteturn0file0L463-L519
+The router then sends a newly framed Ethernet packet on LAN-2 while keeping the IP source/destination unchanged.
 
 ---
 
@@ -988,7 +985,7 @@ Host ── ARP ───────────────→ Host
 | RARP Server | —              | `AA:AA:AA:AA:AA:AA` | LAN-1   |
 
 
-The practical's exact host, router, and RARP configuration is defined in `main()`. fileciteturn0file0L579-L650
+The practical's exact host, router, and RARP configuration is defined in `main()`.
 
 ---
 
@@ -1033,4 +1030,4 @@ New Ethernet frame
 Host-C
 ```
 
-The practical specifically demonstrates successful/failed RARP, same-subnet delivery, ARP caching and expiry, ARP failure, cross-subnet routing, and TTL expiration. fileciteturn0file0L654-L735
+The practical specifically demonstrates successful/failed RARP, same-subnet delivery, ARP caching and expiry, ARP failure, cross-subnet routing, and TTL expiration.
