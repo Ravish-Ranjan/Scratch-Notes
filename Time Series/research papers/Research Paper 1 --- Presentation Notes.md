@@ -378,14 +378,15 @@ for economic growth.
 
 The authors introduce:
 
- DUM2015 =
+  
 
-```{=tex}
+$$
+DUM2015 =
 \begin{cases}
 0, & \text{up to 2014}\\
 1, & \text{from 2015 onward}
 \end{cases}
-```
+$$
 
 ### Why?
 
