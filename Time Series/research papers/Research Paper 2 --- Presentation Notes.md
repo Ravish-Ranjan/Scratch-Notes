@@ -3,21 +3,21 @@
 ## Paper identification
 
 **Title:** *Improving Crude Oil Price Forecasts for India with ARIMAX:
-Evidence from the Diebold--Mariano Test*\
-**Authors:** Saurabh Mishra and Shubhra Katara\
+Evidence from the Diebold--Mariano Test*  
+**Authors:** Saurabh Mishra and Shubhra Katara  
 **Type:** Preprint; explicitly marked as **not peer reviewed** in the
-manuscript\
-**Running title:** Crude Oil Price Forecasting with ARIMAX in India\
-**Study period:** April 2000--March 2025\
-**Frequency:** Monthly\
-**Observations:** 300\
-**Country / context:** India\
+manuscript  
+**Running title:** Crude Oil Price Forecasting with ARIMAX in India  
+**Study period:** April 2000--March 2025  
+**Frequency:** Monthly  
+**Observations:** 300  
+**Country / context:** India  
 **Main idea:** Compare a standard univariate ARIMA model with ARIMAX
 that adds the INR/USD exchange rate as an exogenous predictor, and test
 whether the difference in forecast accuracy is statistically
 significant.
 
-------------------------------------------------------------------------
+---
 
 # 1. What does the research do?
 
@@ -32,8 +32,8 @@ The central question is:
 
 The authors compare two models:
 
-1.  **ARIMA**
-2.  **ARIMAX**
+1. **ARIMA**
+2. **ARIMAX**
 
 The difference is important:
 
@@ -41,7 +41,7 @@ The difference is important:
 
 Uses the historical behavior of crude oil prices.
 
-``` text
+```text
 Past oil prices
       ↓
    ARIMA
@@ -53,7 +53,7 @@ Future oil price
 
 Uses historical oil prices **plus an external variable**:
 
-``` text
+```text
 Past oil prices ──────┐
                       ├──→ ARIMAX ──→ Future oil price
 INR/USD exchange rate ┘
@@ -63,7 +63,7 @@ The paper argues that an Indian oil-price model should account for
 exchange-rate dynamics because crude oil is traded internationally in US
 dollars and India is highly dependent on imported oil.
 
-------------------------------------------------------------------------
+---
 
 # 2. What data does it use?
 
@@ -73,11 +73,13 @@ dollars and India is highly dependent on imported oil.
 
 That gives:
 
-\[ 25 `\times 12`{=tex} = 300 \]
+$$
+25 * 12 = 300
+$$
 
 monthly observations.
 
-------------------------------------------------------------------------
+---
 
 ## Target variable
 
@@ -92,7 +94,7 @@ Source:
 **Petroleum Planning and Analysis Cell (PPAC), Ministry of Petroleum and
 Natural Gas, Government of India**
 
-------------------------------------------------------------------------
+---
 
 ## Exogenous variable
 
@@ -108,38 +110,35 @@ Series:
 
 The series represents the INR/USD exchange rate.
 
-------------------------------------------------------------------------
+---
 
 ## Data availability
 
 The paper states that the data are openly available through Zenodo.
 
-The paper also states that the data were cleaned and subjected to
-outlier correction and consistency checks.
+The paper also states that the data were cleaned and subjected to correction and consistency checks.
 
-------------------------------------------------------------------------
+---
 
 # 3. Why is the exchange rate relevant?
 
 Suppose international crude oil costs:
 
-\[ \$80/barrel \]
+ $80/barrel 
 
-If:
-
-\[ 1\$ = ₹80 \]
+If: $1 = ₹80 
 
 then the rupee-denominated equivalent is approximately:
 
-\[ 80 `\times 80`{=tex} = ₹6400 \]
+ 80 `x` 80 = ₹6400 
 
 If the rupee depreciates to:
 
-\[ 1\$ = ₹85 \]
+ $1 = ₹85 
 
 the same international price becomes:
 
-\[ 80 `\times 85`{=tex} = ₹6800 \]
+ 80 `x` 85 = ₹6800 
 
 Therefore, even if the dollar-denominated oil price does not change,
 exchange-rate movements can affect India's domestic oil-cost
@@ -147,11 +146,11 @@ environment.
 
 This motivates the inclusion of INR/USD in ARIMAX.
 
-------------------------------------------------------------------------
+---
 
 # 4. Pipeline of the operation
 
-``` text
+```text
 Monthly Indian Basket crude oil price
                  +
          Monthly INR/USD
@@ -216,7 +215,7 @@ Monthly Indian Basket crude oil price
 
 This is a good slide to reproduce during the presentation.
 
-------------------------------------------------------------------------
+---
 
 # 5. What methods does it choose?
 
@@ -224,23 +223,25 @@ This is a good slide to reproduce during the presentation.
 
 The paper calculates:
 
--   mean;
--   standard deviation;
--   minimum;
--   maximum;
--   quartiles.
+- mean;
+- standard deviation;
+- minimum;
+- maximum;
+- quartiles.
 
 Reported values:
 
   Variable       Mean   Std. Dev.     Min   Median      Max
-  ----------- ------- ----------- ------- -------- --------
+
+---
+
   INR/USD       58.35       13.86   39.27    54.34    87.06
   Oil price     65.85       28.07   18.24    64.78   132.47
 
 These show substantial movement in both variables over the 2000--2025
 period.
 
-------------------------------------------------------------------------
+---
 
 # 6. Exploratory analysis
 
@@ -248,7 +249,7 @@ period.
 
 The reported correlation between:
 
--   INR/USD and oil price = **0.18**
+- INR/USD and oil price = **0.18**
 
 The paper interprets the relationship as supportive of including
 exchange rates in the forecasting framework.
@@ -270,7 +271,7 @@ A more precise statement is:
 
 This is an important distinction.
 
-------------------------------------------------------------------------
+---
 
 ## Rolling analysis
 
@@ -291,10 +292,10 @@ The rolling standard deviation provides a view of changing volatility.
 The paper highlights volatility spikes around major global shocks,
 particularly:
 
--   2008 global financial crisis;
--   2020 COVID-related disruption.
+- 2008 global financial crisis;
+- 2020 COVID-related disruption.
 
-------------------------------------------------------------------------
+---
 
 # 7. Stationarity testing
 
@@ -304,13 +305,13 @@ The authors use the:
 
 ### Null hypothesis
 
-\[ H_0: `\text{Series has a unit root / is non-stationary}`{=tex} \]
+ H_0: `{Series has a unit root / is non-stationary}`
 
 ### Alternative
 
-\[ H_1: `\text{Series is stationary}`{=tex} \]
+ H_1: `{Series is stationary}`
 
-------------------------------------------------------------------------
+---
 
 ## Reported result
 
@@ -318,32 +319,32 @@ For the crude-oil price:
 
 ### Original series
 
-\[ ADF = -2.77 \]
+ ADF = -2.77 
 
-\[ p = 0.063 \]
+ p = 0.063 
 
 At the usual 5% significance level, the null is not rejected.
 
 Therefore, the original price series is treated as **non-stationary**.
 
-------------------------------------------------------------------------
+---
 
 ## After first differencing
 
-\[ ADF = -11.82 \]
+ ADF = -11.82 
 
-\[ p \< 0.0001 \]
+ p  0.0001 
 
 The null is rejected.
 
 Therefore:
 
-\[ d = 1 \]
+ d = 1 
 
 The series is treated as integrated of order one, (I(1)), for the ARIMA
 specification.
 
-------------------------------------------------------------------------
+---
 
 # 8. Why is differencing necessary?
 
@@ -353,60 +354,63 @@ The original crude-oil price series has a changing level/trend.
 
 First differencing calculates approximately:
 
-\[ `\Delta `{=tex}y_t = y_t-y\_{t-1} \]
+$$
+\nabla Y_t = Y_t - Y_{t-1}
+$$
 
 This removes much of the non-stationary level behavior.
 
 The result is a series that is more appropriate for modelling temporal
 dependence.
 
-------------------------------------------------------------------------
+---
 
 # 9. ACF and PACF
 
 After differencing, the authors examine:
 
--   ACF --- Autocorrelation Function
--   PACF --- Partial Autocorrelation Function
+- ACF --- Autocorrelation Function
+- PACF --- Partial Autocorrelation Function
 
 The plots are used to identify the likely AR and MA orders.
 
 The paper states that the post-differencing ACF/PACF pattern suggests:
 
-\[ ARIMA(1,1,1) \]
+ ARIMA(1,1,1) 
 
-------------------------------------------------------------------------
+---
 
 # 10. ARIMA(1,1,1)
 
 The chosen ARIMA model is:
 
-\[ ARIMA(1,1,1) \]
+ ARIMA(1,1,1) 
 
 Meaning:
 
--   (p=1): one autoregressive term;
--   (d=1): first differencing;
--   (q=1): one moving-average term.
+- (p=1): one autoregressive term;
+- (d=1): first differencing;
+- (q=1): one moving-average term.
 
-------------------------------------------------------------------------
+---
 
 ## Estimated coefficients
 
   Parameter     Coefficient   p-value
-  ----------- ------------- ---------
+
+---
+
   AR(1)               0.288     0.004
   MA(1)               0.081     0.509
-  Sigma²              28.46   \<0.001
+  Sigma²              28.46   0.001
 
 The AR(1) coefficient is statistically significant.
 
 The MA(1) coefficient is not statistically significant at the 5% level.
 
-This is worth mentioning if asked about the individual parameter
-estimates.
+This is worth mentioning if asked about the individual parameter estimates.
 
-------------------------------------------------------------------------
+---
 
 # 11. Why choose ARIMA?
 
@@ -423,7 +427,7 @@ testing whether the exchange-rate variable adds predictive value.
 Without the ARIMA baseline, they could not meaningfully quantify the
 improvement from ARIMAX.
 
-------------------------------------------------------------------------
+---
 
 # 12. Why choose ARIMAX?
 
@@ -431,22 +435,23 @@ ARIMAX extends ARIMA by adding an external variable.
 
 Conceptually:
 
-\[ `\text{Oil price}`{=tex}\_t = `\text{ARIMA dynamics}`{=tex} +
-`\beta`{=tex}(`\text{INR/USD}`{=tex})\_t + `\epsilon`{=tex}\_t \]
+$$
+OilPrices _t = {ARIMA  dynamics} + \beta ({INR/USB}_t) + \epsilon_t
+$$
 
 The purpose is to capture information that is not contained in the
 oil-price history alone.
 
 The authors select INR/USD because:
 
-1.  Crude oil is internationally priced in USD.
-2.  India is highly dependent on oil imports.
-3.  Exchange-rate fluctuations change the rupee cost associated with
-    international oil prices.
-4.  Exchange rates can therefore provide predictive information about
-    oil-price behavior in the Indian context.
+1. Crude oil is internationally priced in USD.
+2. India is highly dependent on oil imports.
+3. Exchange-rate fluctuations change the rupee cost associated with
+  international oil prices.
+4. Exchange rates can therefore provide predictive information about
+  oil-price behavior in the Indian context.
 
-------------------------------------------------------------------------
+---
 
 # 13. Model diagnostics
 
@@ -460,7 +465,7 @@ Purpose:
 
 For ARIMA(1,1,1):
 
-\[ p = 0.97 \]
+ p = 0.97 
 
 ### Interpretation
 
@@ -469,7 +474,7 @@ There is no evidence of remaining residual autocorrelation.
 This is desirable because the model should have captured the predictable
 temporal structure.
 
-------------------------------------------------------------------------
+---
 
 ## Jarque--Bera test
 
@@ -479,13 +484,9 @@ Purpose:
 
 Reported:
 
-\[ p = 0.00 \]
+ p = 0.00 
 
 The paper therefore observes residual non-normality.
-
-### Important presentation point
-
-Do not hide this result.
 
 You can say:
 
@@ -495,7 +496,7 @@ You can say:
 
 This is more accurate than saying the model is perfect.
 
-------------------------------------------------------------------------
+---
 
 # 14. Forecasting
 
@@ -512,12 +513,14 @@ for much of the horizon.
 Example reported forecasts:
 
   Date         Forecast   95% lower CI   95% upper CI
-  ---------- ---------- -------------- --------------
+
+---
+
   Apr 2025        70.77          60.32          81.23
   Sep 2025        70.09          33.99         106.19
   Mar 2026        70.09          17.02         123.16
 
-------------------------------------------------------------------------
+---
 
 ## Important interpretation
 
@@ -526,12 +529,12 @@ increases.
 
 For example:
 
--   April 2025: relatively narrow interval;
--   March 2026: very wide interval.
+- April 2025: relatively narrow interval;
+- March 2026: very wide interval.
 
 This reflects increasing uncertainty as the forecasting horizon grows.
 
-------------------------------------------------------------------------
+---
 
 # 15. How do they evaluate forecasting accuracy?
 
@@ -539,31 +542,33 @@ The paper uses three main error metrics.
 
 ## MAE --- Mean Absolute Error
 
-\[ MAE = `\frac{1}{n}`{=tex} `\sum `{=tex}\|y_t-`\hat `{=tex}y_t\| \]
+$$
+MAE = \frac{1}{n} \sum y_t - \hat y_t
+$$
 
 Measures average absolute forecast error.
 
-------------------------------------------------------------------------
+---
 
 ## RMSE --- Root Mean Squared Error
 
-\[ RMSE = `\sqrt{
-\frac{1}{n}
-\sum(y_t-\hat y_t)^2
-}`{=tex} \]
+$$
+RMSE = \sqrt{\frac{1}{n} \sum(y_t - \hat y_t)^2}
+$$
 
 Places greater weight on larger errors.
 
-------------------------------------------------------------------------
+---
 
 ## MAPE --- Mean Absolute Percentage Error
 
-\[ MAPE = `\frac{100}{n}`{=tex} `\sum`{=tex} `\left`{=tex}\|
-`\frac{y_t-\hat y_t}{y_t}`{=tex} `\right`{=tex}\| \]
+$$
+MAPE = \frac{1}{n} \sum \frac{|y_t - \hat y_t|}{y_t} * 100
+$$
 
 Expresses average error as a percentage.
 
-------------------------------------------------------------------------
+---
 
 # 16. Why use three metrics?
 
@@ -584,14 +589,16 @@ Provides a relative percentage measure.
 Using several metrics reduces dependence on one particular definition of
 forecast error.
 
-------------------------------------------------------------------------
+---
 
 # 17. Model comparison results
 
 The paper reports:
 
   Metric        ARIMA         ARIMAX
-  -------- ---------- --------------
+
+---
+
   MAE          7.9537     **6.2081**
   RMSE         9.0226     **7.2944**
   MAPE       10.4929%    **8.1977%**
@@ -601,7 +608,7 @@ The paper reports:
 The lower values reported for ARIMAX indicate lower forecast error and
 lower information criteria in the authors' comparison.
 
-------------------------------------------------------------------------
+---
 
 # 18. What does the improvement mean numerically?
 
@@ -609,53 +616,62 @@ lower information criteria in the authors' comparison.
 
 From:
 
-\[ 7.9537 \]
+ 7.9537 
 
 to:
 
-\[ 6.2081 \]
+ 6.2081 
 
-Approximate reduction:
+Approximate reduction: 
 
-\[ `\frac{7.9537-6.2081}{7.9537}`{=tex}`\times100`{=tex}
-`\approx21.95`{=tex}% \]
+$$
+\frac{7.9537 - 6.2081}{7.9537} \times 100 \approx 21.95%
+$$
 
-------------------------------------------------------------------------
+ 
+
+---
 
 ## RMSE
 
 From:
 
-\[ 9.0226 \]
+ 9.0226 
 
 to:
 
-\[ 7.2944 \]
+ 7.2944 
 
 Approximate reduction:
 
-\[ `\approx19.15`{=tex}% \]
+$$
+\approx 19.15%
+$$
 
-------------------------------------------------------------------------
+ 
+
+---
 
 ## MAPE
 
 From:
 
-\[ 10.4929% \]
+ 10.4929% 
 
 to:
 
-\[ 8.1977% \]
+ 8.1977% 
 
 Approximate reduction:
 
-\[ `\approx21.87`{=tex}% \]
+$$
+\approx 21.87%
+$$
 
 So the reported ARIMAX errors are roughly 19--22% lower depending on the
 metric.
 
-------------------------------------------------------------------------
+---
 
 # 19. What is the Diebold--Mariano test?
 
@@ -671,28 +687,27 @@ But there is another question:
 
 The **Diebold--Mariano (DM) test** is used for this.
 
-------------------------------------------------------------------------
+---
 
 ## DM test hypothesis
 
 Conceptually:
 
-\[ H_0: `\text{The two forecasts have equal predictive accuracy}`{=tex}
-\]
+ H_0: `The two forecasts have equal predictive accuracy`
 
 against an alternative that their predictive accuracy differs.
 
-------------------------------------------------------------------------
+---
 
 ## Reported result
 
 DM statistic:
 
-\[ 3.432456 \]
+ 3.432456 
 
 p-value:
 
-\[ 0.000598 \]
+ 0.000598 
 
 The p-value is below 0.01.
 
@@ -703,13 +718,13 @@ The authors therefore reject the equal-predictive-accuracy hypothesis.
 The forecast-accuracy difference between ARIMA and ARIMAX is
 statistically significant.
 
-------------------------------------------------------------------------
+---
 
 # 20. Why is the DM test useful?
 
 Suppose we only compare:
 
-``` text
+```text
 ARIMA MAE   = 7.95
 ARIMAX MAE  = 6.21
 ```
@@ -723,7 +738,7 @@ The DM test provides a formal statistical comparison of forecast errors.
 
 Therefore the research has two levels of evidence:
 
-``` text
+```text
 Numerical evidence
        ↓
 MAE / RMSE / MAPE
@@ -737,7 +752,7 @@ Diebold–Mariano test
 Difference is statistically significant
 ```
 
-------------------------------------------------------------------------
+---
 
 # 21. What results are they getting?
 
@@ -749,39 +764,39 @@ The ADF test indicates that the original series is non-stationary.
 
 After first differencing, it becomes stationary.
 
-------------------------------------------------------------------------
+---
 
 ## Result 2 --- ARIMA(1,1,1) provides an adequate baseline
 
 The model has:
 
--   no significant residual autocorrelation according to Ljung--Box;
--   some residual non-normality according to Jarque--Bera.
+- no significant residual autocorrelation according to Ljung--Box;
+- some residual non-normality according to Jarque--Bera.
 
-------------------------------------------------------------------------
+---
 
 ## Result 3 --- ARIMAX has lower forecasting errors
 
 ARIMAX reduces:
 
--   MAE: 7.95 → 6.21
--   RMSE: 9.02 → 7.29
--   MAPE: 10.49% → 8.20%
+- MAE: 7.95 → 6.21
+- RMSE: 9.02 → 7.29
+- MAPE: 10.49% → 8.20%
 
-------------------------------------------------------------------------
+---
 
 ## Result 4 --- The improvement is statistically significant
 
 DM test:
 
-\[ DM=3.432456 \]
+ DM=3.432456 
 
-\[ p=0.000598 \]
+ p=0.000598 
 
 Therefore, the paper reports a statistically significant difference in
 predictive accuracy.
 
-------------------------------------------------------------------------
+---
 
 # 22. What is their interpretation?
 
@@ -792,13 +807,17 @@ price forecasting**.
 The main conceptual message is:
 
 > A univariate model based only on past oil prices does not capture all
-> relevant information. Adding a macroeconomic variable --- INR/USD ---
+> relevant information. Adding a macroeconomic variable 
+> --- INR/USD 
+>
+> ---
+>
 > can improve forecasts.
 
 The paper therefore supports a **multivariate forecasting perspective**
 for oil prices in an import-dependent economy.
 
-------------------------------------------------------------------------
+---
 
 # 23. Why does ARIMAX potentially improve the forecast?
 
@@ -817,7 +836,7 @@ dynamics, ARIMAX can exploit it.
 
 This is the economic motivation behind the model.
 
-------------------------------------------------------------------------
+---
 
 # 24. Important distinction: prediction vs causal effect
 
@@ -835,13 +854,13 @@ predictive information in the specified forecasting framework.
 
 That is a more precise scientific interpretation.
 
-------------------------------------------------------------------------
+---
 
 # 25. Important observation about correlation
 
 The paper reports:
 
-\[ Corr(INR/USD, OilPrice)=0.18 \]
+ Corr(INR/USD, OilPrice)=0.18 
 
 This is a relatively modest contemporaneous correlation.
 
@@ -854,14 +873,14 @@ This illustrates an important time-series concept:
 
 A variable may provide useful information through:
 
--   lagged effects;
--   temporal dynamics;
--   interactions with the autoregressive structure.
+- lagged effects;
+- temporal dynamics;
+- interactions with the autoregressive structure.
 
 Therefore, the usefulness of INR/USD in ARIMAX should not be judged
 solely from the simple correlation coefficient.
 
-------------------------------------------------------------------------
+---
 
 # 26. Important methodological caveat
 
@@ -871,21 +890,21 @@ However, for a rigorous presentation, distinguish:
 
 ### What the paper demonstrates
 
--   lower reported forecasting errors;
--   lower AIC/BIC;
--   significant DM-test result;
--   improved performance within the study's experimental framework.
+- lower reported forecasting errors;
+- lower AIC/BIC;
+- significant DM-test result;
+- improved performance within the study's experimental framework.
 
 ### What it does not automatically demonstrate
 
--   universal superiority of ARIMAX for all oil-price forecasting
-    problems;
--   causal identification of exchange-rate effects;
--   that INR/USD is the only important external variable;
--   that the same improvement would necessarily hold in another time
-    period.
+- universal superiority of ARIMAX for all oil-price forecasting
+problems;
+- causal identification of exchange-rate effects;
+- that INR/USD is the only important external variable;
+- that the same improvement would necessarily hold in another time
+period.
 
-------------------------------------------------------------------------
+---
 
 # 27. Limitations / future work
 
@@ -893,18 +912,18 @@ The paper itself suggests adding additional exogenous variables.
 
 Examples include:
 
--   global demand shocks;
--   interest-rate differentials;
--   geopolitical risk;
--   other macroeconomic indicators;
--   nonlinear models.
+- global demand shocks;
+- interest-rate differentials;
+- geopolitical risk;
+- other macroeconomic indicators;
+- nonlinear models.
 
 This is important because crude oil prices are affected by many factors
 beyond exchange rates.
 
 Potential future models could include:
 
-``` text
+```text
 ARIMAX
    +
 Global demand
@@ -916,7 +935,7 @@ Geopolitical risk
 Other macro variables
 ```
 
-------------------------------------------------------------------------
+---
 
 # 28. Preprint status
 
@@ -930,7 +949,7 @@ It does not mean the analysis is automatically invalid, but it means the
 results should be presented as findings of a **preprint**, not as
 findings that have already passed journal peer review.
 
-------------------------------------------------------------------------
+---
 
 # 29. AI declaration
 
@@ -940,18 +959,18 @@ improvement**.
 
 It states that:
 
--   research design;
--   modelling;
--   data collection;
--   data cleaning;
--   substantive analysis
+- research design;
+- modelling;
+- data collection;
+- data cleaning;
+- substantive analysis
 
 were conducted independently by the authors.
 
 This is useful only if your presentation includes a discussion of
 research methodology or reproducibility.
 
-------------------------------------------------------------------------
+---
 
 # 30. Presentation-ready 60-second explanation
 
@@ -972,7 +991,7 @@ research methodology or reproducibility.
 > interpretation is that exchange-rate information provides useful
 > predictive information beyond the historical oil-price series."
 
-------------------------------------------------------------------------
+---
 
 # 31. Likely presentation questions
 
@@ -1049,13 +1068,16 @@ many global economic and geopolitical factors. The manuscript itself
 suggests adding variables such as demand shocks, interest-rate
 differentials and geopolitical-risk indicators.
 
-------------------------------------------------------------------------
+---
 
 # 32. One-slide summary
 
-  -----------------------------------------------------------------------
+---
+
   Component                           Paper
-  ----------------------------------- -----------------------------------
+
+---
+
   Research question                   Does INR/USD improve Indian
                                       crude-oil price forecasts?
 
@@ -1112,10 +1134,9 @@ differentials and geopolitical-risk indicators.
                                       itself establish causality or
                                       universal superiority
 
-  Status                              Preprint; not peer reviewed
-  -----------------------------------------------------------------------
+## Status                              Preprint; not peer reviewed
 
-------------------------------------------------------------------------
+---
 
 # 33. The paper in one sentence
 
@@ -1123,3 +1144,5 @@ differentials and geopolitical-risk indicators.
 > a univariate ARIMA model improves monthly Indian crude-oil price
 > forecasts, and reports lower forecast errors plus a statistically
 > significant Diebold--Mariano comparison.**
+
+ 

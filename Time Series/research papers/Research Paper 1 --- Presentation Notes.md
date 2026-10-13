@@ -144,8 +144,7 @@ The paper combines several secondary sources:
 - **Our World in Data** --- hydro/nuclear-related energy data.
 - **Political Risk Service (PRS) Group / ICRG** --- political/risk information.
 
-The study therefore uses a **multi-source annual time-series dataset for
-India**.
+The study therefore uses a **multi-source annual time-series dataset for India**.
 
 ---
 
@@ -316,7 +315,10 @@ The reported F-statistic is:
  F = 9.598 
 
 The statistic exceeds the relevant upper critical bound at the reported
-significance levels.
+significance levels.a mixture of (I(0)) and (I(1)) variables.
+
+1. No variable is (I(2)).
+2. The sample is relatively
 
 ### Interpretation
 
@@ -377,8 +379,6 @@ A multiple breakpoint test identifies **2015** as a relevant breakpoint
 for economic growth.
 
 The authors introduce:
-
-  
 
 $$
 DUM2015 =
