@@ -225,8 +225,8 @@ flowchart TD
     A[Digital to Analog] --> B[Amplitude shift keying (ASK)]
     A[Digital to Analog] --> C[Frequency shift keying (FSK)]
     A[Digital to Analog] --> D[Phase shift keying PSK)]
-    B --> E[Quadrature Amplitude Modulation (QAM)]
-    D --> E[Quadrature Amplitude Modulation (QAM)]
+    B[Amplitude shift keying (ASK)] --> E[Quadrature Amplitude Modulation (QAM)]
+    D[Phase shift keying (PSK)] --> E[Quadrature Amplitude Modulation (QAM)]
 
 ```
 
