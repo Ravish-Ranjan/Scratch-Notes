@@ -1,8 +1,42 @@
 # Signal Formulas
 
+Datarate : N
+
+Signal rate : S
+
+conversion cases
+
+1. worst case : signal rate is max
+2. avg case : this is where we are interested
+3. best case : signal rate is min
+
+Signal Rate : no. of signals per time period
+
+$$
+S_{avg} = \frac{c * N}{r}
+$$
+
+```
+c : case factor
+N : bitrate
+r : previously defined ( data elements / signal )
+```
+
+Baseline : moving avg of signal to compare the current signal value against
+
+Baseline wandering : when long sequence of 1's or 0's more avg towards them which can result in bad data reading
+
+DC components : avg value of signal over time
+
+Self- Synchronization : data transmitted helps synchronize clock between sender and reciever
+
 ### Digital to Digital
 
 Nyquist formula for bitrate (noiseless)
+
+$$
+B_{min} = \frac{R}{ 2}
+$$
 
 $$
 R_{max} = 2B log_2 L
@@ -82,12 +116,6 @@ $$
 ActualBitrate < MaximumBitrate
 $$
 
-Signal Rate : no. of signals per time period
-
-$$
-S = \frac{c * N}{r}
-$$
-
 ```
 S : baud rate (signals/sec)
 N : bitrate (bits/sec)
@@ -106,23 +134,22 @@ Line coding schemes
 3. Bipolar : AMI,psuedoternary
 4. Multilevel : 2B/1Q, 8B/6T, 4D-PAM5
 5. Multitransition : MLT-3
-
-1. Unipolar
+6. Unipolar
   1. NRZ : 1 (some volatage V), 0 (0 voltage)     normalized power = 1/2 V^2
-2. Polar
+7. Polar
   1. NRZ-Level : 1 (V1 voltage ) 0 (V2 voltage)
   2. NRZ-I : 1 (signal changes level at beginning of interval), 0 (signal remains same)     1 : go from low to high or high to low     0 : remain on the same level
   3. RZ : 1 (+V for first hald of interval then 0)  0 (-V for first half of the interval then 0)
   4. manchester : 1 (low to high transission in middle) 0 (high to low transission in middle)
   5. differencial manchester : 1 (no transission change ) 0 (transission change)
-3. Bipolar
+8. Bipolar
   1. AMI : 0 (0 volts) 1 (V volts but in different direction than previous 1 signal)
   2. psuedoternary : 1 (0 volts) 0 (V volts but in different direction than previous 1 signal)
-4. Multilevel
+9. Multilevel
   1. 2B1Q : 2-bit signal requires 2^2 levels each encodes different value eg. (00 : 3V, 01 :1V, 10 : -1V, 11 : -3V )
   2. 8B6T : 8 bits of data in 6 signal elemets using 3 voltage levels (+V,0,-V) since 8 bits value can range from 0-255 and 3 voltage levels 6 time can create 3^6 = 729 different values
-  3. 4D-PAM5 : used in gitgabit ethernet 1000base-T (4D -> 4 wires pairs)(PAM -> pulse amplitude modulation) (5 -> voltage levels) 5^4 = 625 levels 
-5. Multitransission
+  3. 4D-PAM5 : used in gitgabit ethernet 1000base-T (4D -> 4 wires pairs)(PAM -> pulse amplitude modulation) (5 -> voltage levels) 5^4 = 625 levels
+10. Multitransission
   1. MLT-3 : (3 -> voltage levels +v,0,-v) 1 (transission to next level) 0(remain at same level) sequence = (0 -> +v -> 0 -> -v -> 0)
 
 ![](asset://localhost/%2Fhome%2Fravish%2FDocuments%2FScratch%20Notes%2Fassets%2FScreenshot%20from%202026-10-13%2017-57-30.png)
@@ -130,7 +157,7 @@ Line coding schemes
 Scrambling methods 
 
 1. B8ZS (bipolar with 8-zeros substitution) : used with bipolar AMI (used cause long sequence of 0's can cause asyncronization)
-  1. replace every consecutive 8 zeros with 
+  1. replace every consecutive 8 zeros with
     1. if last 1 was +V : 0 0 0 + - 0 - +
     2. if last 1 was -V  : 0 0 0 - + 0 + -
 2. HDB3 (high-density bipolar 3-zeros) : for any consecutive 4 zeros , find the no. of 1's befor it
@@ -143,11 +170,64 @@ Scrambling methods
 
 pulse code modulation steps
 
-1. sample
+1. sample (ideals sample rate = 2*bandwidth)
   1. ideal sampling (only at that time instance)
-  2. natual sampling (sample but data flows with signal) 
+  2. natual sampling (sample but data flows with signal)
   3. flat-top sampling (data stays as it got sampled)
-2. quantize
-3. encode
+2. quantize : categorize signal in categories
+3. encode : assign numerical value to each category and binary represent it
+
+Signal to noise ration here
+
+$$
+SNR_{dB} = 6.02(r) + 4.76
+$$
+
+```
+r : no. of bits to represent a level
+```
+
+delta modulation (1bit/sample)
+
+1. only see difference from previous state after a delay,
+  1. if signal is higher then current -> step up -> 1
+  2. if signal is lower then current -> step down -> 0
+
+### Data transmission in medium
+
+```mermaid
+flowchart TD
+    A[Data Transmission] --- B[Parallel]
+    A[Data Transmission] --- C[Serial]
+    C[Serial] --- D(Asynchronus)
+    C[Serial] --- E(Synchronus)
+    C[Serial] --- F(Isochronus)
+```
+
+1. Parallel : n bits together sent via 8 lines
+2. Serial : 1 channel
+  1. asynchronus : [ startbit | payload | stopbit ]
+    1. gaps between each group
+    2. no sender reciever continuous clock
+  2. sychronus :
+    1. shared or recovered clock required
+    2. data transmissted in organized frame or block
+    3. continuous data tranmission
+  3. Isochronus :
+    1. data at predefined time intervals
+    2. controlled or gaurented timing relationship
+    3. when timly delivery is more importatnt
+
+### Digital to Analog (its all about Modulators)
+
+```mermaid
+flowchart TD
+    A[Digital to Analog] --> B[Amplitude shift keying (ASK)]
+    A[Digital to Analog] --> C[Frequency shift keying (FSK)]
+    A[Digital to Analog] --> D[Phase shift keying PSK)]
+    B --> E[Quadrature Amplitude Modulation (QAM)]
+    D --> E[Quadrature Amplitude Modulation (QAM)]
+
+```
 
  
