@@ -125,4 +125,15 @@ Message  W  Z  U  S  A  A  L
     2. gcd(e,phi(n)) = 1
   6. private key = multiplicate inverse of e in mod phi(n)
 
+13. Chineese remainder theorem   x = a (mod m) = b (mod n) = c (mod o) 
+  1. theorem to find a number if the remainders are given when the number is divided by some other numbers
+  2. applicable when all divisors pair have gcd = 1
+    1. gcd(m,n) = gcd(m,o) = gcd(n,o) = 1
+  3. M = m*n*o
+    1. M_i = M / m_i
+  4. find multiplicative inverse z for each M_i mode m_i
+    1. M_m*z_m = 1 (mod m)
+    2. M_n*z_n = 1 (mod n)
+    3. M_o*z_o = 1 (mod 0)
+
  
