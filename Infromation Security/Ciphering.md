@@ -115,4 +115,14 @@ E(x)    22 25 20 18  0  0 11
 Message  W  Z  U  S  A  A  L
 ```
 
+1. RSA algo
+  1. asymetric encrtption : both encryption and decryption key is different
+  2. take 2 large prime no. , p and q
+  3. n = p * q
+  4. phi(n) = (p-1) * (q-1)
+  5. public key = e 
+    1. 1 < e < phi(n)
+    2. gcd(e,phi(n)) = 1
+  6. private key = multiplicate inverse of e in mod phi(n)
+
  
