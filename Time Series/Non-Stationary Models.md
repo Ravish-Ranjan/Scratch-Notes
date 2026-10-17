@@ -12,13 +12,15 @@
 The lag operator gives the value of the series at a previous time step.
 
 1. First lag:
-  $$
+
+$$
   BY_t=Y_{t-1}
-  $$
-2. Lag of order d:
-  $$
+$$
+3. Lag of order d:
+  
+$$
   B^dY_t=Y_{t-d}
-  $$
+$$
 
 ## 3. Difference Operator
 
